@@ -556,7 +556,7 @@ export default function PortfolioProgrammer() {
                 View Projects
               </a>
               <a
-                href={`${BASE_URL}cv/CV_AHMAD BAEHAQI.pdf`}
+                href={`${BASE_URL}/cv/CV_AHMAD_BAEHAQI.pdf`}
                 download
                 className="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-200"
               >
