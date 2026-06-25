@@ -605,7 +605,7 @@ export default function PortfolioProgrammer() {
   <div className="flex flex-col gap-6 md:flex-row md:items-center">
     <div className="flex-shrink-0">
           <img
-            src={`${BASE_URL}/education/A.png`}
+            src={`${BASE_URL}education/A.png`}
             alt="Foto Profil"
             className="h-40 w-40 rounded-2xl object-cover border border-white/10"
           />
