@@ -1,5 +1,8 @@
+
 import { Award, BriefcaseBusiness, Code2, Download, ExternalLink, GraduationCap, Mail, Menu, Rocket, ShieldCheck, Users } from "lucide-react";
 import { useState, useRef } from "react";
+
+const BASE_URL = import.meta.env.BASE_URL;
 
 const navItems = [
   { label: "About", href: "#about" },
@@ -24,14 +27,14 @@ const education: Education[] = [
   {
     school: "MI TWT BEDENG SATU",
     year: "2006 - 2012",
-    image: "/education/mi.png",
+    image: `${BASE_URL}/education/mi.png`,
     status: "Graduated",
     level: "Elementary School",
   },
   {
     school: "MTs Negeri Anjatan",
     year: "2012 - 2015",
-    image: "/education/mts.png",
+    image: `${BASE_URL}/education/mts.png`,
     status: "Graduated",
     level: "Junior High School",
   },
@@ -39,7 +42,7 @@ const education: Education[] = [
     school: "MA Khas Kempek",
     major: "Science Track (MIPA)",
     year: "2015 - 2018",
-    image: "/education/ma.png",
+    image: `${BASE_URL}/education/ma.png`,
     status: "Graduated",
     level: "Senior High School",
   },
@@ -47,7 +50,7 @@ const education: Education[] = [
     school: "Universitas Mercu Buana Yogyakarta",
     major: "Informatics",
     year: "2021 - 2025",
-    image: "/education/kuliah.png",
+    image: `${BASE_URL}/education/kuliah.png`,
     status: "Bachelor's Degree",
     level: "Bachelor",
   },
@@ -66,9 +69,9 @@ const experiences = [
         "Conducted final project-based examinations using real-world case studies to assess students’ understanding and application of the material."
       ],
     images: [
-      "/experience/logoumby.png",
-      "/experience/w1.1.jpeg",
-      "/experience/w1.2.jpeg",
+      `${BASE_URL}/experience/logoumby.png`,
+      `${BASE_URL}/experience/w1.1.jpeg`,
+      `${BASE_URL}/experience/w1.2.jpeg`,
     ],
   },
 
@@ -82,8 +85,8 @@ const experiences = [
         "Documented test results for GMC, JIEP, and Santri applications based on test scenarios, including bug findings, functionality evaluation, and improvement recommendations."
       ],
     images: [
-      "/experience/logogt.png",
-      "/experience/w2.1.jpeg",
+      `${BASE_URL}/experience/logogt.png`,
+      `${BASE_URL}/experience/w2.1.jpeg`,
     ],
   },
 
@@ -98,8 +101,8 @@ const experiences = [
         "Created regular reports on handled issues and provided solutions."
       ],
     images: [
-      "/experience/logogt.png",
-      "/experience/w2.1.jpeg",
+      `${BASE_URL}/experience/logogt.png`,
+      `${BASE_URL}/experience/w2.1.jpeg`,
     ],
   },
 
@@ -116,10 +119,10 @@ const experiences = [
         "Collaborated throughout the development lifecycle: planning, implementation, and testing."
       ],
     images: [
-      "/experience/logoasa.png",
-      "/experience/w4.1.jpeg",
-      "/experience/20.png",
-      "/experience/44.png",
+      `${BASE_URL}/experience/logoasa.png`,
+      `${BASE_URL}/experience/w4.1.jpeg`,
+      `${BASE_URL}/experience/20.png`,
+      `${BASE_URL}/experience/44.png`,
     ],
   },
 
@@ -137,10 +140,10 @@ const experiences = [
         "Optimized application performance and ensured data security."
       ],
     images: [
-      "/experience/logokkp.png",
-      "/experience/w5.1.jpeg",
-      "/experience/w5.2.jpeg",
-      "/experience/w5.3.jpeg",
+      `${BASE_URL}/experience/logokkp.png`,
+      `${BASE_URL}/experience/w5.1.jpeg`,
+      `${BASE_URL}/experience/w5.2.jpeg`,
+      `${BASE_URL}/experience/w5.3.jpeg`,
     ],
   },
 
@@ -155,10 +158,10 @@ const projects = [
     link: "https://github.com/Abay310801/SPKSAW",
 
     images: [
-      "/projects/Tampilan Login.png",
-      "/projects/Tampilan Mobil.png",
-      "/projects/t1.png",
-      "/projects/t2.png",
+      `${BASE_URL}/projects/Tampilan Login.png`,
+      `${BASE_URL}/projects/Tampilan Mobil.png`,
+      `${BASE_URL}/projects/t1.png`,
+      `${BASE_URL}/projects/t2.png`,
     ],
   },
 
@@ -170,11 +173,11 @@ const projects = [
     link: "https://github.com/Abay310801/Sistem-Pakar-Kesehatan-Mental",
 
     images: [
-      "/projects/m1.png",
-      "/projects/m2.png",
-      "/projects/m4.png",
-      "/projects/m3.png",
-      "/projects/m5.png",
+      `${BASE_URL}/projects/m1.png`,
+      `${BASE_URL}/projects/m2.png`,
+      `${BASE_URL}/projects/m4.png`,
+      `${BASE_URL}/projects/m3.png`,
+      `${BASE_URL}/projects/m5.png`,
     ],
   },
 
@@ -186,12 +189,12 @@ const projects = [
     link: "https://github.com/Abay310801/joymath",
     
     images: [
-      "/projects/j1.png",
-      "/projects/j2.png",
-      "/projects/j3.png",
-      "/projects/j4.png",
-      "/projects/j5.png",
-      "/projects/j6.png",
+      `${BASE_URL}/projects/j1.png`,
+      `${BASE_URL}/projects/j2.png`,
+      `${BASE_URL}/projects/j3.png`,
+      `${BASE_URL}/projects/j4.png`,
+      `${BASE_URL}/projects/j5.png`,
+      `${BASE_URL}/projects/j6.png`,
     ],
   },
 
@@ -203,12 +206,12 @@ const projects = [
     link: "https://github.com/Abay310801/Ekan",
     
     images: [
-      "/projects/e1.png",
-      "/projects/e2.png",
-      "/projects/e3.png",
-      "/projects/e4.png",
-      "/projects/e5.png",
-      "/projects/e6.png",
+      `${BASE_URL}/projects/e1.png`,
+      `${BASE_URL}/projects/e2.png`,
+      `${BASE_URL}/projects/e3.png`,
+      `${BASE_URL}/projects/e4.png`,
+      `${BASE_URL}/projects/e5.png`,
+      `${BASE_URL}/projects/e6.png`,
     ],
   },
 
@@ -220,14 +223,14 @@ const projects = [
     link: "https://github.com/Abay310801/Travel-Umroh-Haji",
     
     images: [
-      "/projects/tt1.png",
-      "/projects/tt2.png",
-      "/projects/t3.png",
-      "/projects/t4.png",
-      "/projects/t5.png",
-      "/projects/t6.png",
-      "/projects/t7.png",
-      "/projects/t8.png",
+      `${BASE_URL}/projects/tt1.png`,
+      `${BASE_URL}/projects/tt2.png`,
+      `${BASE_URL}/projects/t3.png`,
+      `${BASE_URL}/projects/t4.png`,
+      `${BASE_URL}/projects/t5.png`,
+      `${BASE_URL}/projects/t6.png`,
+      `${BASE_URL}/projects/t7.png`,
+      `${BASE_URL}/projects/t8.png`,
     ],
   },
 
@@ -239,11 +242,11 @@ const projects = [
     link: "https://github.com/Abay310801/BoemiCoffee",
     
     images: [
-      "/projects/b1.png",
-      "/projects/b2.png",
-      "/projects/b3.png",
-      "/projects/b4.png",
-      "/projects/b5.png",
+      `${BASE_URL}/projects/b1.png`,
+      `${BASE_URL}/projects/b2.png`,
+      `${BASE_URL}/projects/b3.png`,
+      `${BASE_URL}/projects/b4.png`,
+      `${BASE_URL}/projects/b5.png`,
     ],
   },
   
@@ -254,30 +257,30 @@ const skills = [
 ];
 
 const organizationGallery = [
-  "/organization/o1.jpeg",
-  "/organization/o2.png",
-  "/organization/o3.png",
-  "/organization/o4.jpeg",
-  "/organization/o5.png",
-  "/organization/1.png",
-  "/organization/o6.jpeg",
-  "/organization/o7.png",
-  "/organization/o8.jpeg",
-  "/organization/o9.jpeg",
-  "/organization/o10.png",
-  "/organization/o11.jpeg",
-  "/organization/o12.jpeg",
-  "/organization/o13.jpeg",
-  "/organization/o14.jpeg",
-  "/organization/o15.jpeg",
-  "/organization/o16.jpeg",
-  "/organization/o17.jpeg",
-  "/organization/o18.jpeg",
+  `${BASE_URL}/organization/o1.jpeg`,
+  `${BASE_URL}/organization/o2.png`,
+  `${BASE_URL}/organization/o3.png`,
+  `${BASE_URL}/organization/o4.jpeg`,
+  `${BASE_URL}/organization/o5.png`,
+  `${BASE_URL}/organization/1.png`,
+  `${BASE_URL}/organization/o6.jpeg`,
+  `${BASE_URL}/organization/o7.png`,
+  `${BASE_URL}/organization/o8.jpeg`,
+  `${BASE_URL}/organization/o9.jpeg`,
+  `${BASE_URL}/organization/o10.png`,
+  `${BASE_URL}/organization/o11.jpeg`,
+  `${BASE_URL}/organization/o12.jpeg`,
+  `${BASE_URL}/organization/o13.jpeg`,
+  `${BASE_URL}/organization/o14.jpeg`,
+  `${BASE_URL}/organization/o15.jpeg`,
+  `${BASE_URL}/organization/o16.jpeg`,
+  `${BASE_URL}/organization/o17.jpeg`,
+  `${BASE_URL}/organization/o18.jpeg`,
 ];
 
 const organizations = [
   {
-    logo: "/organization/logobem.png",
+    logo: `${BASE_URL}/organization/logobem.png`,
     name: "Faculty of Information Technology Student Executive Board (BEM FTI UMBY)",
     position: "Chairperson",
     year: "Jan 2024 – Jan 2025",
@@ -286,7 +289,7 @@ const organizations = [
   },
 
   {
-    logo: "/organization/logohimaka.png",
+    logo: `${BASE_URL}/organization/logohimaka.png`,
     name: "Informatics Student Association (HIMAKA)",
     position: "Chairperson",
     year: "Dec 2022 – Dec 2023 ",
@@ -295,7 +298,7 @@ const organizations = [
   },
 
   {
-    logo: "/organization/logohimaka.png",
+    logo: `${BASE_URL}/organization/logohimaka.png`,
     name: "Informatics Student Association (HIMAKA)",
     position: "Public Relations Coordinator",
     year: "Dec 2021 – Dec 2022",
@@ -304,7 +307,7 @@ const organizations = [
   },
 
   {
-    logo: "/organization/PERMIKOMNAS.png",
+    logo: `${BASE_URL}/organization/PERMIKOMNAS.png`,
     name: "National Association of Informatics and Computer Students (PERMIKOMNAS)",
     position: "Research and Development Division Member (LITBANG)",
     year: "  Dec 2021 – Dec 2022",
@@ -315,146 +318,146 @@ const organizations = [
 
 const certificates = [
   {
-    image: "/certificates/s1.png",
+    image: `${BASE_URL}/certificates/s1.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s2.png",
+    image: `${BASE_URL}/certificates/s2.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s3.png",
+    image: `${BASE_URL}/certificates/s3.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s4.png",
+    image: `${BASE_URL}/certificates/s4.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s5.png",
+    image: `${BASE_URL}/certificates/s5.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s6.png",
+    image: `${BASE_URL}/certificates/s6.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s7.png",
+    image: `${BASE_URL}/certificates/s7.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s8.png",
+    image: `${BASE_URL}/certificates/s8.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s9.png",
+    image: `${BASE_URL}/certificates/s9.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s10.png",
+    image: `${BASE_URL}/certificates/s10.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s11.png",
+    image: `${BASE_URL}/certificates/s11.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s12.png",
+    image: `${BASE_URL}/certificates/s12.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s13.jpeg",
+    image: `${BASE_URL}/certificates/s13.jpeg`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s14.png",
+    image: `${BASE_URL}/certificates/s14.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s15.png",
+    image: `${BASE_URL}/certificates/s15.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s16.png",
+    image: `${BASE_URL}/certificates/s16.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s17.png",
+    image: `${BASE_URL}/certificates/s17.png`,
     description: " <><><><><><><><><><><><> ",
   },
 {
-    image: "/certificates/s18.png",
+    image: `${BASE_URL}/certificates/s18.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s19.png",
+    image: `${BASE_URL}/certificates/s19.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s20.png",
+    image: `${BASE_URL}/certificates/s20.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s21.png",
+    image: `${BASE_URL}/certificates/s21.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s22.png",
+    image: `${BASE_URL}/certificates/s22.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s23.png",
+    image: `${BASE_URL}/certificates/s23.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s24.png",
+    image: `${BASE_URL}/certificates/s24.png`,
     description: " <><><><><><><><><><><><>  ",
   },
 
   {
-    image: "/certificates/s25.png",
+    image: `${BASE_URL}/certificates/s25.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s26.png",
+    image: `${BASE_URL}/certificates/s26.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s27.png",
+    image: `${BASE_URL}/certificates/s27.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s28.png",
+    image: `${BASE_URL}/certificates/s28.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
   {
-    image: "/certificates/s29.png",
+    image: `${BASE_URL}/certificates/s29.png`,
     description: " <><><><><><><><><><><><> ",
   },
 
@@ -553,7 +556,7 @@ export default function PortfolioProgrammer() {
                 View Projects
               </a>
               <a
-                href="/cv/CV_AHMAD BAEHAQI.pdf"
+                href={`${BASE_URL}cv/CV_AHMAD BAEHAQI.pdf`}
                 download
                 className="inline-flex items-center gap-2 rounded-2xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-200"
               >
@@ -602,7 +605,7 @@ export default function PortfolioProgrammer() {
   <div className="flex flex-col gap-6 md:flex-row md:items-center">
     <div className="flex-shrink-0">
           <img
-            src="/education/A.png"
+            src={`${BASE_URL}/education/A.png`}
             alt="Foto Profil"
             className="h-40 w-40 rounded-2xl object-cover border border-white/10"
           />
