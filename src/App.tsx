@@ -613,7 +613,7 @@ export default function PortfolioProgrammer() {
 
         <div>
           <p className="leading-8 text-slate-300">
-            A Bachelor’s degree graduate in Informatics with experience as a Fullstack Web Developer using Laravel, React, and Node.js. Experienced in end-to-end system development on real-world projects such as business travel administration systems and educational platforms, with a focus on building RESTful APIs, database management, and responsive, user-friendly UI development. Also experienced as a Quality Assurance Engineer in application testing and bug analysis, as well as a leadership background as the head of a student organization. Comfortable working in cross-functional teams to deliver effective, scalable, and high-quality digital solutions.
+            Bachelor’s degree graduate in Informatics with experience as a Full-Stack Web Developer using Laravel, React, and Node.js. Experienced in end-to-end system development through real-world projects, including business travel administration systems and educational platforms, with a focus on RESTful API development, database management, and responsive, user-friendly interfaces. Also experienced as a Quality Assurance Engineer in application testing and bug analysis, with a leadership background as a student organization chairperson. Accustomed to working in cross-functional teams to deliver effective, scalable, and high-quality digital solutions.
           </p>
         </div>
 
