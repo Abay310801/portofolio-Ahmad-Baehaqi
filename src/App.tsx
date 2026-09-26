@@ -577,7 +577,9 @@ export default function PortfolioProgrammer() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <h1 className="max-w-4xl text-4xl font-black leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-              Hi, I'm <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent"> Ahmad Baehaqi</span>
+              Hi, I'm <span className="bg-gradient-to-r from-cyan-300 to-blue-400 bg-clip-text text-transparent"> 
+              <br/>
+                Ahmad Baehaqi</span>
               <br />
               
             </h1>
