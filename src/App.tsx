@@ -499,6 +499,7 @@ const certificates = [
   }
 
 export default function PortfolioProgrammer() {
+    const [menuOpen, setMenuOpen] = useState(false);
     const [selectedProjectImages, setSelectedProjectImages] = useState<string[]>([]);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [certificateIndex, setCertificateIndex] = useState(0);
@@ -527,10 +528,43 @@ export default function PortfolioProgrammer() {
             Contact Me
           </a>
 
-          <button className="rounded-xl border border-white/10 p-2 lg:hidden" aria-label="Menu">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="rounded-xl border border-white/10 p-2 lg:hidden"
+            aria-label="Menu"
+          >
             <Menu />
           </button>
         </nav>
+        
+        {menuOpen && (
+        <div className="lg:hidden border-t border-white/10 bg-[#070B14] px-6 py-5">
+
+          <div className="flex flex-col gap-5">
+
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-slate-300 transition hover:text-cyan-300"
+              >
+                {item.label}
+              </a>
+            ))}
+
+            <a
+              href="#contact"
+              onClick={() => setMenuOpen(false)}
+              className="rounded-xl bg-white px-5 py-2.5 text-center font-semibold text-slate-950"
+            >
+              Contact Me
+            </a>
+
+          </div>
+
+        </div>
+      )}
       </header>
 
       <section id="home" className="relative overflow-hidden px-6 py-24 lg:px-10 lg:py-32">
