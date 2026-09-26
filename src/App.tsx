@@ -128,7 +128,7 @@ const experiences = [
 
   {
     role: "Web Developer – Internship",
-    company: "",
+    company: "Ministry of Marine Affairs and Fisheries of the Republic of Indonesia (KKP)",
     period: "Nov 2025 – May 2026",
       description: [
         "Developed a web application for official travel and assignment letter management to improve administrative efficiency.",
